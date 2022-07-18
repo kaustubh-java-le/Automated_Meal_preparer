@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      background:
+            /* top, transparent black, faked with gradient */ 
+            linear-gradient(
+              rgba(0, 0, 0, 0.7), 
+              rgba(0, 0, 0, 0.7)
+            ),
+      url("{{ url_for('static', filename = 'images/wp4.jpg')}}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+    </style>
+    <body>
+  
+      <div id = "main-wrapper"
+      style="width: 925px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 45px;
+      padding: 5px;
+      height: 900px;">
+  <br><center><h1 style="color:	#191970; font-size: 60px;"><img src="{{ url_for('static', filename = 'images/ct.jpg')}}" alt="" width="80" height="80">Diet Plan 1<img src="{{ url_for('static', filename = 'images/ct.jpg')}}" alt="" width="80" height="80"></h1></center><br>
+  <div id = "mai"
+  style="width: 850px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, 	#87ceeb , #817971);
+  padding: 1px;
+  height: 150px;"
+  >
+  <ul>
+    <li style="color:	#191970; font-size: 26px; font-weight: bold;">Breakfast</li>
+    <p style="color:	black; font-size: 20px; font-weight: bold;" >Bannana Nut Oatmeal / Sweet Patato Hash / Non Fat Yogurt / Bacon/ Banana Tahini Toast</p>
+</div>
+
+
+<br>
+<div id = "mai"
+  style="width: 850px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, 	#87ceeb , #817971);
+  padding: 1px;
+  height: 150px;"
+  >
+  <ul>
+    <li style="color:	#191970; font-size: 26px; font-weight: bold;">Lunch</li>
+    <p style="color:	black; font-size: 20px; font-weight: bold;" >Homemade dal , roti, Rajma/ chana / Lobhia with  salad and curd</p>
+</div>
+
+<br>
+<div id = "mai"
+  style="width: 850px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, 	#87ceeb , #817971);
+  padding: 1px;
+  height: 150px;"
+  >
+  <ul>
+    <li style="color:	#191970; font-size: 26px; font-weight: bold;">Dinner</li>
+    <p style="color:	black; font-size: 20px; font-weight: bold;" >Dal, veggies, with rice or roti and vegetable soup</p>
+</div>
+<br>
+<div id = "mai"
+  style="width: 850px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, 	#87ceeb , #817971);
+  padding: 1px;
+  height: 150px;"
+  >
+  <ul>
+    <li style="color:	#191970; font-size: 26px; font-weight: bold;">Snack</li>
+    <p style="color:	black; font-size: 20px; font-weight: bold;" >Plain Tuna Salad / Celery / veg sandwich / milk and apple</p>
+</div></div>
+    
+</body>
+</html>

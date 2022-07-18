@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'style2.css')}}">
+</head>
+<style>
+  body {
+    background:
+          /* top, transparent black, faked with gradient */ 
+          linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ),
+    url("{{ url_for('static', filename = 'images/food4.jpg')}}");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }
+  </style>
+<body>
+  <div id = "main-wrapper"
+  style="width: 500px;
+  margin: 0 auto;
+  background:white;
+  padding: 5px;
+  border-radius: 2px #2c3e50;
+  height: 1200px;
+">
+
+<center><h1 style="color:	#006400; font-size: 50px;">Get Your Diet Plan</h1></center>
+    <form  action="http://127.0.0.1:5000/predict" method="POST">
+      <br><br>
+      <label id = "alabel" style="color: #006400; font-size: 25px; font-weight: bold" >Age:</label>
+      <input id = "age1" type="text" class = "inputvalues" name="age" placeholder="Enter Your Age"/><br><br><br>
+
+      <label style="color: #006400; font-size: 25px; font-weight: bold">Weight:</label>
+      <input id = "weight-input" type="text" class = "inputvalues" name="weight" placeholder="Enter Your Weight in kilogram"/><br><br><br>
+
+      <label style="color: #006400; font-size: 25px; font-weight: bold">Height:</label>
+      <input id = "height-input" type="text" class = "inputvalues" name="height" placeholder="Enter Your Height in centimeter"/><br><br>
+
+      <center><button style="background-color: #006400;
+      padding: 6px;
+        color: white;
+        height: 42px;
+        font-size: 22px;
+        text-align: center;
+        width: 150px;" type = "button" onclick="calcTotal()" id="btn">Calculate</button></center><br><br><br>
+    <label style="color: #006400; font-size: 25px; font-weight: bold">BMI-Tag:</label>
+    <input id = "ybmitag" type="text" class = "inputvalues" name="BMITag" placeholder="Click the Calculate Button" /><br><br><br>
+    <label style="color: #006400; font-size: 25px; font-weight: bold">BMI:</label>
+  <input id = "your-bmi" type="text" class = "inputvalues" name="BMI" placeholder="Click the Calculate Button" /><br><br><br>
+  <label style="color: #006400; font-size: 25px; font-weight: bold">Activity Rate:</label>
+  
+  <select id="ActivityRate" name="ActivityRate">  
+    <option value = "1.2"> 1.2 sedentary   
+    </option>  
+    <option value = "1.3"> 1.3 Lightly Active
+    </option>  
+    <option value = "1.5"> 1.5 Moderately Active
+    </option>  
+    <option value = "1.7"> 1.7 Highly Active
+    </option>  
+    <option value = "1.9"> 1.9 Extremely Active
+    </option>  
+    </select><br><br><br><br><br><br>
+   <center><button style = "background-color: #006400;
+    padding: 6px;
+    color: white;
+    width: 32%;
+    height: 48px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 6px;" type="submit" name = "sub_btn" class="btn btn-primary btn-block btn-large">Predict</button></center><br><br><br><br><br>
+   {{result}}
+
+   
+  </form>
+ 
+  
+</div>
+<script src="{{ url_for('static', filename = 'main.js')}}"></script>
+</body>
+</html>
+</body>
+</html>
